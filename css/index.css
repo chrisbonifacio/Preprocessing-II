@@ -202,6 +202,11 @@ header nav .nav-links {
   align-items: center;
   width: 35%;
 }
+@media (max-width: 800px) {
+  header nav .nav-links {
+    width: 55%;
+  }
+}
 @media (max-width: 500px) {
   header nav .nav-links {
     width: 80%;
@@ -298,6 +303,14 @@ header nav a {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 800px) {
+  .home .content-pick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 @media (max-width: 500px) {
   .home .content-pick {
     display: flex;
@@ -310,20 +323,65 @@ header nav a {
   width: 30%;
   margin-bottom: 30px;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .home .content-pick .destination {
     width: 75%;
   }
 }
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 80%;
+  }
+}
 .home .btn {
+  background-color: #008080;
+  transition: all 0.2s ease-in-out;
+  border-radius: 15px;
+  width: 18rem;
+}
+.home .btn a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #17a2b8;
-  border-radius: 10px;
   width: 100%;
-  padding: 1.5rem 0;
+  text-decoration: none;
   font-size: 1.6rem;
   font-weight: 600;
   color: #fff;
+  padding: 1.5rem 0;
+}
+.home .btn:hover {
+  background-color: #00b3b3;
+}
+@media (max-width: 500px) {
+  .home .btn:hover {
+    background-color: #004d4d;
+  }
+}
+@media (max-width: 500px) {
+  .home .btn {
+    background-color: #17a2b8;
+    transition: all 0.2s ease-in-out;
+    border-radius: 15px;
+    width: 100%;
+  }
+  .home .btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 1.5rem 0;
+  }
+  .home .btn:hover {
+    background-color: #1fc8e3;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) {
+  .home .btn:hover {
+    background-color: #117a8b;
+  }
 }

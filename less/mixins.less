@@ -8,3 +8,28 @@
 .border() {
   border-bottom: 2px dashed #c0c0c0;
 }
+
+.button(@bg-color, @width) {
+  background-color: @bg-color;
+  transition: all 0.2s ease-in-out;
+  border-radius: 15px;
+  width: @width;
+
+  a {
+    .flex(center, center);
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: @bold;
+    color: #fff;
+    padding: 1.5rem 0;
+  }
+
+  &:hover {
+    background-color: lighten(@bg-color, 10%);
+
+    @media @mobile {
+      background-color: darken(@bg-color, 10%);
+    }
+  }
+}

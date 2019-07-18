@@ -79,6 +79,11 @@
     display: flex;
     justify-content: space-between;
 
+    @media @tablet {
+      .flex(center, center);
+      flex-direction: column;
+    }
+
     @media @mobile {
       .flex(center, center);
       flex-direction: column;
@@ -88,20 +93,21 @@
       width: 30%;
       margin-bottom: 30px;
 
-      @media @mobile {
+      @media @tablet {
         width: 75%;
+      }
+
+      @media @mobile {
+        width: 80%;
       }
     }
   }
 
   .btn {
-    .flex(center, center);
-    background: @button-bg;
-    border-radius: 10px;
-    width: 100%;
-    padding: 1.5rem 0;
-    font-size: 1.6rem;
-    font-weight: @bold;
-    color: #fff;
+    .button(@teal, 18rem);
+
+    @media @mobile {
+      .button(@eastern-blue, 100%);
+    }
   }
 } // home
