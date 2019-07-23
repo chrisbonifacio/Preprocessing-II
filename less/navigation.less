@@ -1,1 +1,42 @@
 // Navigation Styles here
+header {
+  .border();
+
+  nav {
+    .flex(space-between, center);
+    padding: 2rem 0;
+
+    @media @mobile {
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      margin: 0;
+
+      @media @mobile {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .nav-links {
+      .flex(space-between, center);
+      width: 35%;
+
+      @media @tablet {
+        width: 55%;
+      }
+
+      @media @mobile {
+        width: 80%;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.6rem;
+      font-weight: @bold;
+    }
+  }
+}
